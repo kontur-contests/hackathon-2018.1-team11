@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class CharacterMove : MonoBehaviour
 {
     [SerializeField]
-    peivate float DefalutSpeedValue;
+    private float _defalutSpeedValue;
     [SerializeField]
-    public float RunSpeedValue;
+    private float _runSpeedValue;
 
     public float Speed;
 
@@ -28,9 +29,6 @@ public class CharacterMove : MonoBehaviour
     }
 
     private bool _isRun;
-
-    [SerializeField]
-    private float Gravity;
 
     private SpriteRenderer _renderer;
 
@@ -57,17 +55,17 @@ public class CharacterMove : MonoBehaviour
         {
             if (this._stamina != 0f)
             {
-                this.Speed = this.RunSpeedValue;
+                this.Speed = this._runSpeedValue;
                 this._stamina--;
             }
             else
             {
-                this.Speed = this.DefalutSpeedValue;
+                this.Speed = this._defalutSpeedValue;
             }
         }
 
         if (this._isRun != true)
-            this.Speed = this.DefalutSpeedValue;
+            this.Speed = this._defalutSpeedValue;
 
         if (this._stamina == 0f)
             this.StartCoroutine(StaminaRepair());
