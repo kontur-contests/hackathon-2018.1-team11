@@ -47,8 +47,11 @@ TagManager:
   - name: Ground
     uniqueID: 3519083235
     locked: 0
-  - name: Trees
-    uniqueID: 1261060233
+  - name: Grass
+    uniqueID: 407790807
+    locked: 0
+  - name: Environment
+    uniqueID: 2032216923
     locked: 0
   - name: Characters
     uniqueID: 55234949

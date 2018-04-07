@@ -15,7 +15,7 @@ public class CameraFollow : MonoBehaviour
         Vector3 movementVector = Vector3.MoveTowards(this.transform.position, this.Target.transform.position, this.speed);
 
         movementVector.z = -10f;
-        movementVector.y = 1f;
+        movementVector.y = 2.72f;
 
         this.transform.position = movementVector;
     }

@@ -38,6 +38,7 @@ public class CharacterMove : MonoBehaviour
 
     public void Move()
     {
+
         float movement = Input.GetAxis("Horizontal") * this.Speed * Time.deltaTime;
 
         this.transform.position += new Vector3(movement, 0);
